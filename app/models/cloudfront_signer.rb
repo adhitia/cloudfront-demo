@@ -37,7 +37,7 @@ class CloudfrontSigner
     def sign(data)
       private_key = ENV['CLOUDFRONT_PRIVATE_KEY']
       digest = OpenSSL::Digest::SHA1.new
-      key    = OpenSSL::PKey::RSA.new private_key
+      key    = OpenSSL::PKey::RSA.new File.read('private.pem')
       result = key.sign digest, data
       safe_base64(result)
     end
