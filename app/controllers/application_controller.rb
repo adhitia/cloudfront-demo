@@ -4,6 +4,6 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   def after_sign_in_path_for(resource)
-    redirect_to get_ticket_path({:service => ENV['CONTENT_URL']})
+    return redirect_to get_ticket_path({:service => ENV['CONTENT_URL']})
   end
 end
