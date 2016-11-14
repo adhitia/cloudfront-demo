@@ -1,14 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>CloudfrontDemo</title>
+  <title>Hacktiv8 Den</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-
-<%= yield %>
-
+  <div id="echelon-wrapper">
+    <div id="all-body">
+      <%= yield %>
+      <div id="modal-placement"></div>
+    </div>
+    <div id="all-footer">
+    </div>
+  </div>
+  <script>var resizefunc = [];</script>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= yield :javascript_inline %>
 </body>
 </html>

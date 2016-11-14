@@ -1,0 +1,15 @@
+//= require datatables/jquery.dataTables.min
+//= require datatables/dataTables.bootstrap
+//= require datatables/dataTables.buttons.min
+//= require datatables/buttons.bootstrap.min
+//= require datatables/jszip.min
+//= require datatables/pdfmake.min
+//= require datatables/vfs_fonts
+//= require datatables/buttons.html5.min
+//= require datatables/buttons.print.min
+//= require datatables/dataTables.fixedHeader.min
+//= require datatables/dataTables.keyTable.min
+//= require datatables/dataTables.responsive.min
+//= require datatables/responsive.bootstrap.min
+//= require datatables/dataTables.scroller.min
+//= require datatables/datatables.init
