@@ -10,7 +10,7 @@ class AuthorizationController < ApplicationController
       redirect_to set_cookies_url(:ticket => ticket.token, :host => URI.parse(params[:service]).host)
     else
       store_location_for(:user, get_ticket_path(service: params[:service]))
-      redirect_to ENV['SIGNER_URL'] + '/user/signin?API_KEY=hacktiv8_nuggets'
+      redirect_to ENV['SIGNER_URL'] + '/users/signin?API_KEY=hacktiv8_nuggets'
     end
   end
 
