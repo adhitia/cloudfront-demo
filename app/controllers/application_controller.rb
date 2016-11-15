@@ -5,7 +5,7 @@ class ApplicationController < ActionController::Base
   before_filter :block_foreign_hosts
 
   def whitelisted?(ip)
-    return true if [103.43.128.42].include?(ip)
+    return true if ['103.43.128.42'].include?(ip)
     false
   end
 
