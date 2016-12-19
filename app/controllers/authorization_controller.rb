@@ -6,10 +6,9 @@ class AuthorizationController < ApplicationController
   # user before issuing the tickets
   def get_ticket
     if current_user
-      ticket = current_user.tickets.create! service: params[:service]
-      redirect_to set_cookies_url(:ticket => ticket.token, :host => URI.parse(params[:service]).host)
+      ticket = current_user.tickets.create! service: current_user.content_site_url
+      redirect_to set_cookies_url(:ticket => ticket.token, :host => URI.parse(current_user.content_site_url).host)
     else
-      store_location_for(:user, get_ticket_path(service: params[:service]))
       redirect_to ENV['SIGNER_URL'] + '/users/sign_in?API_KEY=hacktiv8_nuggets'
     end
   end
